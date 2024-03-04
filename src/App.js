@@ -5,6 +5,9 @@ import Home from "./pages/Home";
 import MyPage from "./pages/MyPage";
 import Forum from "./pages/Forum";
 import Map from "./pages/Map";
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import {Model} from './Scene'
 
 import "./styles/common/App.css";
 
@@ -18,6 +21,15 @@ function App() {
         <Route path="/forum" element={<Forum />} />
         <Route path="/map" element={<Map />} />
       </Routes>
+      <Canvas>
+      <OrbitControls/>
+        <mesh>
+          <ambientLight intensity={1}/>
+          <directionalLight intensity={1}/>
+          <Model/>
+          <meshStandardMaterial attach="material" color= {0xa3b18a}/>
+        </mesh>
+      </Canvas>
     </div>
   );
 }
