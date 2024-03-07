@@ -1,4 +1,5 @@
 import React from "react";
+import Game from "../components/home/Game"
 
 class Home extends React.Component {
   render() {
@@ -7,6 +8,7 @@ class Home extends React.Component {
         <h1>Home</h1>
         <h1>Welcome to my website.</h1>
         <h1>Home Page</h1>
+        <Game/>
       </div>
     );
   }
