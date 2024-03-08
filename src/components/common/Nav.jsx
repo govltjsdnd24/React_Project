@@ -57,13 +57,6 @@ function Nav() {
             <li>
               <NavLink to="/map">Map</NavLink>
             </li>
-
-            {/* <NavLink to="/register">
-              <button className="btn">Register</button>
-            </NavLink>
-            <NavLink to="/login">
-              <button className="btn btn__login">Login</button>
-            </NavLink> */}
           </ul>
         </nav>
         <div className="header__content__toggle">

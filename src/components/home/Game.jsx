@@ -55,7 +55,7 @@ function Game() {
       };
       
       const handleKeyUp = (event) => {
-        const key = event.code;
+        const key= event.code;
         const find=keyboardMap.find((entry) => entry.keys.includes(key))
         if(find!=null){
           const keyMapping = find.name;
@@ -89,10 +89,11 @@ function Game() {
                     </RigidBody>
                     </Controller>
                 </KeyboardControls>
-                <Room/>
+                <Room position={[0,3.8,0]}/>
                 <RigidBody type="fixed">
                     <mesh>
                     <boxGeometry attach="geometry" position= {[0,-10,0]} args={[100, 1, 100]} />
+                    <meshPhongMaterial color="#ff0000" opacity={0.1} transparent />
                     </mesh>
                 </RigidBody>
             </Physics>
